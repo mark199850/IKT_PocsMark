@@ -1,3 +1,9 @@
+<?php
+if (!isset($_POST['userName1']) && !isset($_POST['userPass1'])){
+    $_POST['userName1'] = "";
+    $_POST['userPass1'] = "";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,22 +32,7 @@
 </div>
 
 <div class="row h-100" id="formDiv">
-    <div class="col-md-7 col-sm-12" style="background-color:white;">p</div>
-    <div class="col-md-5 col-sm-12" style="background-color:lightblue;">
-    <form style="margin-top:25vh">
-        <div class="form-group">
-            <label for="exampleInputEmail1">E-mail address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <p id="reglog">Register</p>
-        <button type="submit" class="btn btn-primary">Regisztráció</button>
-    </form>
-    </div>
+
 </div>
 
 <div class="row fixed-bottom">
@@ -56,6 +47,9 @@
 
 </div>
 <script>
+$( document ).ready(function() {
+    $("#formDiv").load("login.php", { userName1:"<?php echo $_POST['userName1'];?>", userPass1:"<?php echo $_POST['userPass1'];?>"});
+});
 $(document).on('click', '#reglog', function(){
     if($("#reglog").html() == "Register") {
     $("#formDiv").load("reg.php");
