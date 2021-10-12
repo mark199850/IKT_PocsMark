@@ -7,20 +7,20 @@ if (isset($_POST['userName1']) && isset($_POST['userPass1'])){
 }
 ?>
 <div class="col-md-7 col-sm-12" style="background-color:white;"></div>
-    <div class="col-md-5 col-sm-12" style="background-color:lightblue;">
-    <form style="margin-top:50%" action="index.php" method="POST">
-        <div class="form-group">
-            <label>Felhasználónév</label>
-            <input type="text" class="form-control" name="userName1" value="<?php echo $log->getUName(); ?>" aria-describedby="emailHelp" placeholder="E-mail">
+    <div class="col-md-5 col-sm-12 shadow-lg">
+    <form action="index.php" method="POST">
+        <div class="form-group mt-2">
+            <label>Username</label>
+            <input type="text" class="form-control mt-2" name="userName1" value="<?php echo $log->getUName(); ?>" aria-describedby="emailHelp" placeholder="E-mail">
             <small class="form-text text-muted"><?php echo $log->getUNameErr(); ?></small>
         </div>
-        <div class="form-group">
-            <label>Jelszó</label>
-            <input type="password" class="form-control" name="userPass1" placeholder="Password">
+        <div class="form-group mt-3">
+            <label>Password</label>
+            <input type="password" class="form-control mt-2" name="userPass1" placeholder="Password">
             <small class="form-text text-muted"><?php echo $log->getUPassErr(); ?></small>
         </div>
-        <p id="reglog">Register</p>
-        <button type="submit" class="btn btn-primary">Log in</button>
+        <p id="reglog" class="mt-3 text-green w-25" style="cursor:pointer">Register</p>
+        <button type="submit" class="btn btn-primary green">Log in</button>
     </form>
     </div>
     

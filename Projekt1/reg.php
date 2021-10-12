@@ -1,24 +1,50 @@
-<div class="col-md-7 col-sm-12" style="background-color:white;">p</div>
-    <div class="col-md-5 col-sm-12" style="background-color:lightblue;">
-    <form style="margin-top:50%">
-    <div class="form-group">
+<div class="col-md-7 col-sm-12" style="background-color:white;"></div>
+    <div class="col-md-5 col-sm-12 shadow-lg">
+    <form>
+    <div class="form-group mt-3">
             <label for="exampleInputEmail1">Username</label>
-            <input type="email" class="form-control" id="username" placeholder="Username">
+            <input type="text" class="form-control mt-2 mb-3" id="username" placeholder="Username" required>
         </div>
-        <div class="form-group">
+        <div class="form-group mt-3">
             <label for="exampleInputEmail1">E-mail address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
+            <input type="email" class="form-control mt-2" id="email" aria-describedby="emailHelp" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
-        <div class="form-group">
+        <div class="form-group mt-3">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control mt-2" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
         </div>
-        <div class="form-group">
+        <div class="form-group mt-3">
+            <label for="exampleInputPassword1">Password again</label>
+            <input type="password" class="form-control mt-2" id="confirm_password" placeholder="Password again" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        </div>
+        <div class="form-group mt-3">
             <label for="exampleInputEmail1">Full Name</label>
-            <input type="email" class="form-control" id="fullname" placeholder="E-mail">
+            <input type="text" class="form-control mt-2" id="fullname" placeholder="Full Name" required>
         </div>
-        <p id="reglog">Login</p>
-        <button type="submit" class="btn btn-primary">Register</button>
+        <p id="reglog" class="mt-3 text-green w-25" style="cursor:pointer">Login</p>
+        <button type="submit" class="btn btn-primary green">Register</button>
     </form>
+    <div id="msg" class="mt-2"></div><!--Jeszó vizsgálat eredményének a megjelenítése-->
     </div>
+    <script>
+    //A két jeszó mező összehasonlítása
+    //Az első jelszó mező id="Password"
+    //A A második jelszó mező id="ConfirmPassword"
+    $(document).ready(function(){
+        $("#password").keyup(function(){
+             if ($("#password").val() != $("#confirm_password").val()) {
+                 $("#msg").html("Password do not match").css("color","red");
+             }else{
+                 $("#msg").html("Password matched").css("color","green");
+            }
+        });
+        $("#confirm_password").keyup(function(){
+             if ($("#password").val() != $("#confirm_password").val()) {
+                 $("#msg").html("Password do not match").css("color","red");
+             }else{
+                 $("#msg").html("Password matched").css("color","green");
+            }
+        });
+    });
+  </script>
