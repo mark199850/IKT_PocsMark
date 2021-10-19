@@ -42,7 +42,7 @@ if (!isset($_POST['userName1']) && !isset($_POST['userPass1'])){
 </div>
 <script>
 $( document ).ready(function() {
-    $("#formDiv").load("login.php", { userName1:"<?php echo $_POST['userName1'];?>", userPass1:"<?php echo $_POST['userPass1'];?>"});
+    $("#formDiv").load("login.php", { userName1:"<?php echo $_POST['userName1'];?>", userPass1:"<?php echo $_POST['userPass1'];?>", uName:"<?php echo $_POST['uName'];?>", uPass:"<?php echo $_POST['uPass'];?>", uEmail:"<?php echo $_POST['uEmail'];?>", uFullName:"<?php echo $_POST['uFullName'];?>"});
 });
 $(document).on('click', '#reglog', function(){
     if($("#reglog").html() == "Register") {

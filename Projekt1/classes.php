@@ -4,7 +4,25 @@ class Forms{
     protected $uPass;
     protected $uNameErr;
     protected $uPassErr;
+    
+    public function getUName()
+    {
+            return $this->uName;
+    }
 
+    public function getUPass()
+    {
+            return $this->uPass;
+    }
+    public function getUNameErr()
+    {
+            return $this->uNameErr;
+    }
+
+    public function getUPassErr()
+    {
+            return $this->uPassErr;
+    }
 }
 
 class LoginCheck extends Forms {
@@ -31,27 +49,64 @@ class LoginCheck extends Forms {
 
     }
 
-    public function getUName()
-    {
-            return $this->uName;
-    }
 
-    public function getUPass()
-    {
-            return $this->uPass;
-    }
-    public function getUNameErr()
-    {
-            return $this->uNameErr;
-    }
-
-    public function getUPassErr()
-    {
-            return $this->uPassErr;
-    }
 }
 
 class RegCheck extends Forms {
+    private $uFullName;
+    private $uEmail;
 
+    function getUFullName(){
+            return $this->uFullName;
+    }
+    function getUEmail(){
+            return $this->uEmail;
+    }
+
+    function __construct($name,$password,$fname,$email){
+        $this->uName=$name;
+        $this->uPass=md5($password);
+        $this->uFullName = $fname;
+        $this->uEmail = $email;
+
+        $sql =  "INSERT INTO `users` (`UName`, `Email`, `Pass`, `Name`, `Active`, `Rank`, `Ban`, `RegTime`, `LogTime`)
+        VALUES
+        ('".$this->getUName()."','".$this->getUEmail()."','".$this->getUPass()."','".$this->getUFullName()."',0,0,0,'".date('Y-m-d-H-i')."','0')";
+        /*('PM','a@a.hu','12345','Pócs Márk',0,0,0,'2002-02-22','0')";*/
+        $c=new Connection();
+        if (mysqli_query($c->getConn(), $sql)) {
+            echo "Új rekord feltöltése sikeres volt";
+        }else{
+            echo "Error: " . $sql . "<br>" . mysqli_error($c->getConn());
+        }
+
+        mysqli_close($c->getConn());
+        //header('location:index.php');
+    }
 }
+
+class Connection{
+    private $servername;
+    private $username;
+    private $password;
+    private $do;
+    privaTE $conn;
+
+    public function getConn(){
+        return $this->conn;
+    }
+
+    function __construct(){
+        $this->servername = "localhost";
+        $this->username = "root";
+        $this->pw = "";
+        $this->db = "gyak1";
+        $this->conn = mysqli_connect($this->servername, $this->username, $this->password, $this->db);
+
+        if($this->conn->connect_error){
+            die("Connection failed: " . $this->conn->connect_error);
+        }
+    }
+}
+
 ?>
