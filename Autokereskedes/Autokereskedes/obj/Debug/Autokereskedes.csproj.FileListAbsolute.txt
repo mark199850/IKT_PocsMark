@@ -1,0 +1,10 @@
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\bin\Debug\Autokereskedes.exe.config
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\bin\Debug\Autokereskedes.exe
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\bin\Debug\Autokereskedes.pdb
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\obj\Debug\Autokereskedes.csproj.AssemblyReference.cache
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\obj\Debug\Autokereskedes.Form1.resources
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\obj\Debug\Autokereskedes.Properties.Resources.resources
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\obj\Debug\Autokereskedes.csproj.GenerateResource.cache
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\obj\Debug\Autokereskedes.csproj.CoreCompileInputs.cache
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\obj\Debug\Autokereskedes.exe
+C:\Users\Tanulo\source\repos\Autokereskedes\Autokereskedes\obj\Debug\Autokereskedes.pdb
