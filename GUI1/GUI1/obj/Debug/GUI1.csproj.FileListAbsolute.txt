@@ -1,0 +1,10 @@
+C:\Users\Tanulo\source\repos\GUI1\GUI1\bin\Debug\GUI1.exe.config
+C:\Users\Tanulo\source\repos\GUI1\GUI1\bin\Debug\GUI1.exe
+C:\Users\Tanulo\source\repos\GUI1\GUI1\bin\Debug\GUI1.pdb
+C:\Users\Tanulo\source\repos\GUI1\GUI1\obj\Debug\GUI1.csproj.AssemblyReference.cache
+C:\Users\Tanulo\source\repos\GUI1\GUI1\obj\Debug\GUI1.Form1.resources
+C:\Users\Tanulo\source\repos\GUI1\GUI1\obj\Debug\GUI1.Properties.Resources.resources
+C:\Users\Tanulo\source\repos\GUI1\GUI1\obj\Debug\GUI1.csproj.GenerateResource.cache
+C:\Users\Tanulo\source\repos\GUI1\GUI1\obj\Debug\GUI1.csproj.CoreCompileInputs.cache
+C:\Users\Tanulo\source\repos\GUI1\GUI1\obj\Debug\GUI1.exe
+C:\Users\Tanulo\source\repos\GUI1\GUI1\obj\Debug\GUI1.pdb
